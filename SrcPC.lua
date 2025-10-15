@@ -1239,37 +1239,6 @@ task.spawn(function()
     end
 end)
 
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
-
-local uiPath = workspace:WaitForChild("Merchants")
-    :WaitForChild("AffinityMerchant")
-    :WaitForChild("Clickable")
-    :WaitForChild("AffinityUI")
-
-local screenGui = uiPath:FindFirstChildOfClass("ScreenGui") or uiPath
-
-TabMain:AddToggle("OpenAffinityUI", {
-    Title = "Open Affinity",
-    Description = "เปิด UI สุ่มพลังแฝง",
-    Default = false,
-    Callback = function(state)
-        if state then
-
-            screenGui.Parent = PlayerGui
-            if screenGui:IsA("ScreenGui") then
-                screenGui.Enabled = true
-            end
-        else
-            if screenGui:IsA("ScreenGui") then
-                screenGui.Enabled = false
-            end
-        end
-    end
-})
-
-
     TabMain:AddButton({
     Title = "God Mode",
     Description = "Press God Mode and ResetSpawn",
@@ -2221,5 +2190,4 @@ SaveManager:LoadAutoloadConfig()
 -- Anti ADMIN and UI Moblie
 ----------------------------------------------------------------------------------------------------------------------------
 loadstring(game:HttpGet("https://raw.githubusercontent.com/perkungeiei1-star/antiadmin/refs/heads/main/Antiadmin.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/perkungeiei1-star/UI/refs/heads/main/UI%20Moblie.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------
