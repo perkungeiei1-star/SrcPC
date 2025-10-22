@@ -516,7 +516,7 @@ TabJuice:AddToggle("AutoDrink2", {
         end
     })
 
-    local Players = game:GetService("Players")
+local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
@@ -1879,14 +1879,6 @@ TabMixerV2:AddToggle("AutoFruitAll", {
 task.spawn(runSpawnLoop)
 
 TabMain:AddButton({
-    Title = "Hop Vip Server",
-    Description = "Warning have banned",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/perkungeiei1-star/VIPSERVER/refs/heads/main/Vip.txt"))()
-    end
-})
-
-TabMain:AddButton({
     Title = "Hop Normal Server",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/perkungeiei1-star/HOPSERVERNORMAL/refs/heads/main/Normal.lua"))()
@@ -2181,6 +2173,8 @@ for _, box in ipairs({"Common Box","Uncommon Box","Rare Box","Ultra Rare Box"}) 
     AddDropToggle(box)
 end
 
+
+
 Window:SelectTab(1)
 print("Script loaded: BenJaMinZ Hub (Complete)")
 SaveManager:SetLibrary(Fluent)
@@ -2191,4 +2185,5 @@ SaveManager:LoadAutoloadConfig()
 -- Anti ADMIN and UI Moblie
 ----------------------------------------------------------------------------------------------------------------------------
 loadstring(game:HttpGet("https://raw.githubusercontent.com/perkungeiei1-star/antiadmin/refs/heads/main/Antiadmin.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/perkungeiei1-star/UI/refs/heads/main/UI%20Moblie.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------
