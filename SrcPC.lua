@@ -12,7 +12,7 @@
         Size = UDim2.fromOffset(580,460),
         Acrylic = false,
         Theme = "Dark",
-        MinimizeKey = Enum.KeyCode.F
+        MinimizeKey = Enum.KeyCode.RightControl
     })
     local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
     local player = Players.LocalPlayer
@@ -35,7 +35,7 @@
     local TabSpecter = Window:AddTab({ Title = "Specter Player", Icon = "eye" })
     local TabJuice = Window:AddTab({ Title = "Buy Juice", Icon = "shopping-cart" })
     local TabMixerV2 = Window:AddTab({ Title = "Mixer Fruit", Icon = "syringe" })
-    local TabSetting = Window:AddTab({ Title = "Setting", Icon = "settings" })
+    local Setting = Window:AddTab({ Title = "Setting", Icon = "settings" })
 
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
@@ -52,11 +52,6 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Duration = 5
 })
 
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "BenJaMinZ Hub",
-    Text = "Anti ADMIN Active",
-    Duration = 5
-})
 
 
     local function teleportAFK(pos)
